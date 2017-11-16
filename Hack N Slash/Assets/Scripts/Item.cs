@@ -2,34 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item :MonoBehaviour {
-    [SerializeField]
+[System.Serializable]
+public class Item  {
     float hitPoint;
-    [SerializeField]
     float damge;
-    [SerializeField]
     ItemType itemType;
-
-    void Start()
-    {
-        switch (itemType)
-        {
-            case ItemType.Weapon:
-                break;
-            case ItemType.HandArmors:
-                break;
-            case ItemType.LegArmors:
-                break;
-            case ItemType.HeadArmor:
-                break;
-            case ItemType.BodyArmor:
-                break;
-
-        }
-    }
 
 }
 public enum ItemType
 {
-    Weapon,HeadArmor,HandArmors,LegArmors,BodyArmor
+    Weapon,HeadArmor,HandArmors,BodyArmor
 }
