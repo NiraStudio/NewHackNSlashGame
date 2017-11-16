@@ -4,13 +4,14 @@ using UnityEngine;
 
 [System.Serializable]
 public class Item  {
-    Sprite visual;
-    Sprite icon;
-    string description;
-    string name;
+    public string name;
+    public string description;
+    public ItemType itemType;
+    public Sprite icon;
+    public Sprite visual;
     public float hitPoint;
     public float damage;
-    public ItemType itemType;
+    
 
 }
 public enum ItemType
