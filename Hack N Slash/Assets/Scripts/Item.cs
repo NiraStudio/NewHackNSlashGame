@@ -17,5 +17,5 @@ public class Item  {
 }
 public enum ItemType
 {
-    Weapon,HeadArmor,BodyArmor
+    Weapon,HeadArmor,BodyArmor,hello
 }
