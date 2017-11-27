@@ -4,9 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class Pet : MonoBehaviour {
-    string name;
-    float damage;
-    float speed;
+    public PetData data;
     public void Attack()
     {
 

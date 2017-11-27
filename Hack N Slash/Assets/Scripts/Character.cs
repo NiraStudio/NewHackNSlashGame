@@ -2,25 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Character : MonoBehaviour {
 
-    [SerializeField]
-    float hp;
-    [SerializeField]
-    float speed;
-    [SerializeField]
-    float damage;
-    [SerializeField]
-    float armor;
-    [SerializeField]
-    float criticalChance;
-    [SerializeField]
-    float lifeSteal;
-    [SerializeField]
-    float cooldown;
+    public CharacterData data;
+
     Dictionary<int, string> equipedItems = new Dictionary<int, string>();
     void Start () {
-		
+        print(data.damage);
 	}
 	
 	void Update () {
