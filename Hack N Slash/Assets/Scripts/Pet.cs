@@ -4,21 +4,40 @@ using UnityEngine;
 
 [System.Serializable]
 public class Pet : MonoBehaviour {
+
+    //public vars
     public PetData data;
-    public void Attack()
-    {
 
-    }
-    public void onEnter()
-    {
 
-    }
+    //local vars
+    protected string petName;
+    protected float damage;
+    protected float speed;
 
 	void Start () {
-		
+        getData();
 	}
 	
 	void Update () {
 		
 	}
+
+    public void Attack()
+    {
+
+    }
+
+    public void onEnter()
+    {
+
+    }
+
+    public void getData()
+    {
+        petName = data.petName;
+        damage = data.damage;
+        speed = data.speed;
+        
+    }
+
 }
