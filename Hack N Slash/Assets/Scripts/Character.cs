@@ -17,7 +17,7 @@ public class Character : MonoBehaviour {
     protected float lifeSteal;
 
     Rigidbody2D rg;
-    Dictionary<int, string> equipedItems = new Dictionary<int, string>();
+    Dictionary<string, int> equipedItems = new Dictionary<string, int>();
 
 
     void Start () {
@@ -64,7 +64,7 @@ public class Character : MonoBehaviour {
         hitPoint = data.hitPoint;
     }
     //change the equiped items
-    public void ChangeClothing(Dictionary<int,string> newClothing)
+    public void ChangeClothing(Dictionary<string,int> newClothing)
     {
         equipedItems = newClothing;
     }

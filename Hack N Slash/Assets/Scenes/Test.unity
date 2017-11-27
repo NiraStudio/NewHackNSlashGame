@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490656f107ce70a4a990efeaa6e8f33c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiPlay: 2
+  fallMultiPlay: 5
 --- !u!114 &1927830522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8177883411fe06f4ea9431a4f634a815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: ed47912b48e64fb4e80e26fb83901b91, type: 2}
 --- !u!1 &2101388913
 GameObject:
   m_ObjectHideFlags: 0
