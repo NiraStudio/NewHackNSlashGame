@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpScript : MonoBehaviour {
+public class gravityController: MonoBehaviour {
     public float fallMultiPlay=2;
     Rigidbody2D rg;
 	// Use this for initialization

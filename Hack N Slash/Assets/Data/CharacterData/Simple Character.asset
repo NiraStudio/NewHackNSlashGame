@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Name: Simple Character
   m_EditorClassIdentifier: 
   characterName: Hello
+  jumpForce: 0
+  speed: 10
   hitPoint: 100
-  speed: 20
   damage: 20
   armor: 5
   criticalChance: 5

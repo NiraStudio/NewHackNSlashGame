@@ -6,27 +6,28 @@ public class Character : MonoBehaviour {
     //public var
     public CharacterData data;
 
-
     //local var
     protected string characterName;
-    protected float hitPoint;
     protected float speed;
+    protected float jumpForce;
+    protected float hitPoint;
     protected float damage;
     protected float armor;
     protected float criticalChance;
     protected float lifeSteal;
+    int direction;
 
     Rigidbody2D rg;
     Dictionary<string, int> equipedItems = new Dictionary<string, int>();
 
 
     void Start () {
-        getData();
+        GetData();
         rg = GetComponent<Rigidbody2D>();
 	}
 	
 	void Update () {
-        
+        rg.position += Vector2.right * direction * speed * Time.deltaTime;
 	}
     public void Jump()
     {
@@ -53,7 +54,7 @@ public class Character : MonoBehaviour {
     {
 
     }
-    public void getData()
+    public void GetData()
     {
         characterName = data.characterName;
         damage = data.damage;
@@ -67,5 +68,9 @@ public class Character : MonoBehaviour {
     public void ChangeClothing(Dictionary<string,int> newClothing)
     {
         equipedItems = newClothing;
+    }
+    public void ChangeDirection(int dir)
+    {
+        direction = dir;
     }
 }
