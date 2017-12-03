@@ -66,9 +66,6 @@ public class ItemSystemEditorCreate : EditorWindow {
         GUILayout.EndVertical();
     }
 
-    
-
-
     void DetailPart()
     {
         GUILayout.BeginVertical();
