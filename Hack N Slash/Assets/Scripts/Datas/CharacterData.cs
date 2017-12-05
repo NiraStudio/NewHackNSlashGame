@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterData : ScriptableObject {
 
     public string characterName;
+    public GameObject shape;
+    public int id;
     public float jumpForce;
     public float speed;
     public float hitPoint;

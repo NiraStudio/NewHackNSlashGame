@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: Simple Character
   m_EditorClassIdentifier: 
   characterName: Hello
+  shape: {fileID: 1555616714676242, guid: 01ec241fabbc5c04599ca38fa6d3f95c, type: 2}
+  id: 1
   jumpForce: 0
   speed: 10
   hitPoint: 100

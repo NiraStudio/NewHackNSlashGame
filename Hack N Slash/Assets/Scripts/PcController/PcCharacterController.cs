@@ -16,6 +16,9 @@ public class PcCharacterController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.A))
             character.ChangeDirection(-1);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            character.Jump();
         
 	}
 }

@@ -27,4 +27,9 @@ public class AssetCreator : MonoBehaviour {
     {
         ScriptableObjectUtility.CreateAsset<BossData>("BossData");
     }
+    [MenuItem("Data Creator/Create character DataBase")]
+    public static void CreateCharacterDataBase()
+    {
+        ScriptableObjectUtility.CreateAsset<CharacterDatabase>("character");
+    }
 }

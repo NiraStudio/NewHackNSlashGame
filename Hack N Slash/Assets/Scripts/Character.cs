@@ -29,32 +29,32 @@ public class Character : MonoBehaviour {
 	void Update () {
         rg.position += Vector2.right * direction * speed * Time.deltaTime;
 	}
-    public void Jump()
+    public virtual void Jump()
     {
         //animation
         rg.velocity += Vector2.up * 20;
     }
-    public void GetHit()
+    public virtual void GetHit()
     {
 
     }
-    public void Attack()
+    public virtual void Attack()
     {
 
     }
-    public void Dash()
+    public virtual void Dash()
     {
 
     }
-    public void Roll()
+    public virtual void Roll()
     {
 
     }
-    public void UseAbility()
+    public virtual void UseAbility()
     {
 
     }
-    public void GetData()
+    public virtual void GetData()
     {
         characterName = data.characterName;
         damage = data.damage;
@@ -65,11 +65,11 @@ public class Character : MonoBehaviour {
         hitPoint = data.hitPoint;
     }
     //change the equiped items
-    public void ChangeClothing(Dictionary<string,int> newClothing)
+    public virtual void ChangeClothing(Dictionary<string, int> newClothing)
     {
         equipedItems = newClothing;
     }
-    public void ChangeDirection(int dir)
+    public virtual void ChangeDirection(int dir)
     {
         direction = dir;
     }
