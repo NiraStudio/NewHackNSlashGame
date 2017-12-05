@@ -5,7 +5,11 @@ using UnityEngine;
 public class Character : MonoBehaviour {
     //public var
     public CharacterData data;
-
+    [Header("Body parts")]
+    public GameObject weaponPos;
+    public GameObject HeadPos;
+    public GameObject ArmorPos;
+    public bool rightSided;
     //local var
     protected string characterName;
     protected float speed;
@@ -16,7 +20,6 @@ public class Character : MonoBehaviour {
     protected float criticalChance;
     protected float lifeSteal;
     int direction;
-
     Rigidbody2D rg;
     Dictionary<string, int> equipedItems = new Dictionary<string, int>();
 
@@ -40,11 +43,30 @@ public class Character : MonoBehaviour {
     }
     public virtual void Attack()
     {
-
+        GetComponent<Animator>().SetTrigger("Attack");
     }
     public virtual void Dash()
     {
+        rg.velocity += Vector2.right * direction * 10;
+        rg.velocity += Vector2.up* 5;
+    }
+    public virtual void Flip()
+    {
+        if(direction>0&&!rightSided){
+            Vector2 t=transform.localScale;
+            t.x*=-1;
+            transform.localScale=t;
+            rightSided = !rightSided;
 
+        }
+        if (direction < 0 && rightSided)
+        {
+            Vector2 t = transform.localScale;
+            t.x *= -1;
+            transform.localScale = t;
+            rightSided = !rightSided;
+
+        }
     }
     public virtual void Roll()
     {
@@ -72,5 +94,6 @@ public class Character : MonoBehaviour {
     public virtual void ChangeDirection(int dir)
     {
         direction = dir;
+        Flip();
     }
 }
