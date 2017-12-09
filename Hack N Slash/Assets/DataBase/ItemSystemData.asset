@@ -11,4 +11,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2df466233c8ebc449feafcf624f0031, type: 3}
   m_Name: ItemSystemData
   m_EditorClassIdentifier: 
-  db: []
+  db:
+  - name: mehdi
+    description: very first weapon
+    itemType: 0
+    icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    visual: {fileID: 1208297332345516, guid: 88a70d12efa35044a8eff2e3b9453f4a, type: 2}
+    hitPoint: 100
+    damage: 10
+  - name: amir
+    description: sdfzxc
+    itemType: 0
+    icon: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    visual: {fileID: 1208297332345516, guid: 88a70d12efa35044a8eff2e3b9453f4a, type: 2}
+    hitPoint: 100
+    damage: 10

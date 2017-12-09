@@ -70,6 +70,16 @@ public class Character : MonoBehaviour {
     }
     public virtual void Roll()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            this.gameObject.GetComponent<Collider2D>().enabled = false;
+            speed *= 1.5f;
+        }
+        if (Input.GetKeyUp(KeyCode.G))
+        {
+            this.gameObject.GetComponent<Collider2D>().enabled = true;
+            speed /= 1.5f;
+        }
 
     }
     public virtual void UseAbility()
