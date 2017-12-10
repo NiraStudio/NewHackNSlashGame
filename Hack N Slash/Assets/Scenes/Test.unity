@@ -293,6 +293,22 @@ Prefab:
       propertyPath: ShapeModule.radius.value
       value: 0.44997355
       objectReference: {fileID: 0}
+    - target: {fileID: 1555616714676242, guid: 01ec241fabbc5c04599ca38fa6d3f95c, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1372441520356102, guid: 01ec241fabbc5c04599ca38fa6d3f95c, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945981560806076, guid: 01ec241fabbc5c04599ca38fa6d3f95c, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1704565781130116, guid: 01ec241fabbc5c04599ca38fa6d3f95c, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 01ec241fabbc5c04599ca38fa6d3f95c, type: 2}
   m_IsPrefabParent: 0

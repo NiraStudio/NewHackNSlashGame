@@ -19,6 +19,11 @@ public class PcCharacterController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space))
             character.Attack ();
-        
-	}
+        if (Input.GetKeyDown(KeyCode.G))
+            character.Roll();
+        if (Input.GetKeyUp(KeyCode.G))
+            character.UnRoll();
+
+
+    }
 }
