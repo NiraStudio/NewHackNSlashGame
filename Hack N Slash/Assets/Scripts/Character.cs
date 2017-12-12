@@ -70,13 +70,17 @@ public class Character : MonoBehaviour {
     }
     public virtual void Roll()
     {
-            this.gameObject.layer = 9;
-            speed *= 1.5f;
+        GetComponent<Rigidbody2D>().velocity =Vector2.zero;
+        GetComponent<Rigidbody2D>().velocity += Vector2.right*direction*15;
+        GetComponent<Rigidbody2D>().velocity += Vector2.up *5;
+
+        this.gameObject.layer = 9;
+        GetComponent<Animator>().SetBool("rolling", true);
     }
     public virtual void UnRoll()
     {
         this.gameObject.layer = 8;
-        speed /= 1.5f;
+        GetComponent<Animator>().SetBool("rolling", false);
     }
     public virtual void UseAbility()
     {
