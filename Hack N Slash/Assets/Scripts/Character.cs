@@ -19,14 +19,17 @@ public class Character : MonoBehaviour {
     protected float armor;
     protected float criticalChance;
     protected float lifeSteal;
+
     int direction;
     Rigidbody2D rg;
+    Animator anim;
     Dictionary<string, int> equipedItems = new Dictionary<string, int>();
 
 
     void Start () {
         GetData();
         rg = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 	}
 	
 	void Update () {
@@ -70,21 +73,21 @@ public class Character : MonoBehaviour {
     }
     public virtual void Roll()
     {
-        GetComponent<Rigidbody2D>().velocity =Vector2.zero;
-        GetComponent<Rigidbody2D>().velocity += Vector2.right*direction*15;
-        GetComponent<Rigidbody2D>().velocity += Vector2.up *5;
+        rg.velocity = Vector2.zero;
+        rg.velocity += Vector2.right*direction*15;
+        rg.velocity += Vector2.up * 5;
 
         this.gameObject.layer = 9;
-        GetComponent<Animator>().SetBool("rolling", true);
+        anim.SetTrigger("Roll");
     }
-    public virtual void UnRoll()
-    {
-        this.gameObject.layer = 8;
-        GetComponent<Animator>().SetBool("rolling", false);
-    }
+   
     public virtual void UseAbility()
     {
 
+    }
+    public virtual void ChangeLayer(int LayerNumber)
+    {
+        gameObject.layer = LayerNumber;
     }
     public virtual void GetData()
     {

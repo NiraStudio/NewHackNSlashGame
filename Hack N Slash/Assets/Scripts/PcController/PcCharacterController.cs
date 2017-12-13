@@ -21,8 +21,7 @@ public class PcCharacterController : MonoBehaviour {
             character.Attack ();
         if (Input.GetKeyDown(KeyCode.G))
             character.Roll();
-        if (Input.GetKeyUp(KeyCode.G))
-            character.UnRoll();
+        
 
 
     }
